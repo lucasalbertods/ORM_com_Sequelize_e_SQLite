@@ -4,9 +4,15 @@ const bcrypt = require('bcrypt');
 const db = require('./database');
 const User = require('./models/User');
 const { generateToken, authMiddleware } = require('./middleware/auth');
+const cors = require('cors');
 
 const app = express();
 const PORT = 3000;
+
+app.use(cors({
+  origin: '*',
+  credentials: true
+}))
 
 // Middleware
 app.use(express.json());
