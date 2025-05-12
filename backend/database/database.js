@@ -3,7 +3,7 @@ const { Sequelize } = require('sequelize');
 
 const db = new Sequelize({
   dialect: 'sqlite',
-  storage: 'database.sqlite' // Nome do arquivo do banco
+  storage: 'database/database.sqlite' // Nome do arquivo do banco
 });
 
 module.exports = db;
