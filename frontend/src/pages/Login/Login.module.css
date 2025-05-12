@@ -1,0 +1,65 @@
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100dvw;
+    height: 100dvh;
+    background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.521) 60%, rgba(6, 10, 29, 0.925) 100%), url('https://lightwallpapers.com/downloads/wallpaper-movie-posters/7.movie_posters_wallpaper_8k_by_dskstudiosl_decsx4s-fullview.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.loginConteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 500px;
+    gap: 20px;
+    padding: 100px 40px;
+    border-radius: 20px;
+    background: rgba(27, 26, 26, 0.384);
+    backdrop-filter: blur(5px);
+}
+
+.loginInput {
+    text-align: start;
+    text-indent: 10px;
+    width: 98.8%;
+    height: 50px;
+    border-radius: 5px;
+    border: solid  1px rgb(255, 255, 255);
+    background: none;
+    outline: none;
+
+}
+
+.loginInput:focus {
+  border-color: rgb(53, 87, 226); /* muda a cor quando clica */
+   /* opcional: efeito brilhoso */
+}
+
+.buttonLogin {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: solid  2px rgb(53, 87, 226);
+    background-color: rgb(53, 87, 226);
+    cursor: pointer;
+}
+
+.buttonLogin:hover {
+    border: solid  2px  rgb(44, 72, 185);
+    background-color: rgb(44, 72, 185);
+}
+
+a {
+  font-weight: 500;
+  color: rgb(53, 87, 226);
+  text-decoration: inherit;
+  cursor: pointer;
+}
+a:hover {
+  color: rgb(44, 72, 185);
+}

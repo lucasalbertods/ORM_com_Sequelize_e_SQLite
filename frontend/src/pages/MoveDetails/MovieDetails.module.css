@@ -1,0 +1,132 @@
+.detailBackground {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 100dvw;
+    height: 100%;
+    height: 100dvh;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.detailContent {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 900px;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.87) 60%, rgba(0, 0, 0, 0) 90%), rgba(27, 26, 26, 0);
+    
+}
+
+.header{
+    padding: 30px;
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        border: none;
+        background: rgba(27, 26, 26, 0.384);
+        cursor: pointer;
+        transition: 0.2s;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    button:hover {
+        background-color: rgba(53, 88, 226, 0.555);
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 50px;
+}
+
+.title {
+    text-shadow: 2px 5px rgba(53, 88, 226, 0.548);
+}
+
+.title {
+  position: relative;
+  color: white;
+  font-size: 40px;
+  z-index: 1;
+}
+
+
+
+
+
+.description {
+    font-size: 16px;
+    text-align: justify;
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.yearAndRate {
+    display: flex;
+    gap: 20px;
+}
+
+.rateRed, .rateOrange, .rateGreen, .date, .popularity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    gap: 5px;
+    border-radius: 50px;
+}
+
+.date, .popularity {
+    min-width: 80px;
+    background: rgba(27, 26, 26, 0.801);
+    backdrop-filter: blur(5px);
+}
+
+.rateRed {
+    background: rgba(189, 18, 18, 0.788);
+}
+
+.rateOrange {
+    background: rgba(194, 109, 30, 0.788);
+}
+
+.rateGreen {
+    background: rgba(15, 156, 45, 0.788);
+}
+
+.buttonContent {
+    display: flex;
+    gap: 20px;
+}
+
+.addMovieButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 60px;
+    border-radius: 80px;
+    border: none;
+    cursor: pointer;
+    background: rgba(27, 26, 26, 0.384);
+    backdrop-filter: blur(5px);
+    transition: 0.2s;
+    gap: 10px;
+}
+
+.addMovieButton:hover {
+    background: rgb(53, 87, 226);
+}

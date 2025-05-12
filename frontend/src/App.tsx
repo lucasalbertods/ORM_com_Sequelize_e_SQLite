@@ -1,49 +1,22 @@
-import { useEffect, useState } from 'react'
-import axios from 'axios'
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
+import Home from './pages/Home/Home';
+import MovieDetails from './pages/MoveDetails/MovieDetails';
+import MyMovieDetails from './pages/MoveDetails/MyMovieDetails';
 
 function App() {
-  const [token, setToken] = useState(null)
-
-  useEffect(() => {
-    const fazerLogin = async () => {
-      try {
-        const response = await axios.post('http://localhost:3000/login', {
-          email: 'eduardo@gmail.com',
-          password: '123456'
-        });
-        setToken(response.data.token)
-      } catch (error) {
-        console.error('Erro no Login', error);
-      }
-    };
-
-    fazerLogin();
-  }, [])
-
-  useEffect(()=>{
-    const listUsers = async () => {
-      try {
-        const response = await axios.get('http://localhost:3000/users', {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            xxxx: "teste"
-          }
-        });
-
-        console.log(response.data.users)
-      } catch (error) {
-        console.error('Erro ao listar usuários', error);
-      }
-    } 
-    listUsers();
-  },[token])
-
   return (
-    <div>
-      <h1>{`${token}`}</h1>
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/movie/:id" element={<MovieDetails />} />
+        <Route path="/library/movie/:id" element={<MyMovieDetails />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
